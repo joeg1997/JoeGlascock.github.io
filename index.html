@@ -6,16 +6,16 @@
     <title>Joe Glascock - Personal Webpage</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f2f5;
             color: #333;
         }
         header {
             background-color: #007BFF;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
         }
         .container {
@@ -25,10 +25,15 @@
         }
         section {
             margin: 2rem 0;
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h2 {
             border-bottom: 2px solid #007BFF;
             padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         .social-links a {
             margin: 0 0.5rem;
@@ -44,6 +49,16 @@
             width: 100%;
             bottom: 0;
         }
+        .profile-image {
+            float: left;
+            margin-right: 2rem;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .clear {
+            clear: both;
+        }
     </style>
 </head>
 <body>
@@ -54,7 +69,9 @@
     <div class="container">
         <section id="about-me">
             <h2>About Me</h2>
+            <img src="your-profile-image.jpg" alt="Joe Glascock" class="profile-image">
             <p>Hello! I'm Joe Glascock, a passionate real estate investor and AI enthusiast. I specialize in investing in residential real estate in pro-landlord and pro-wholesale friendly states. I also have a keen interest in AI and developer technology, exploring platforms like TensorFlow and PyTorch for AI development.</p>
+            <div class="clear"></div>
         </section>
         <section id="real-estate-portfolio">
             <h2>Real Estate Portfolio</h2>
@@ -77,8 +94,8 @@
             <h2>Contact Information</h2>
             <p>Feel free to reach out to me through the following channels:</p>
             <ul>
-                <li>Email: [Your Email]</li>
-                <li>Phone: [Your Phone Number]</li>
+                <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+                <li>Phone: <a href="tel:+1234567890">+1234567890</a></li>
             </ul>
             <div class="social-links">
                 <a href="https://www.facebook.com/joe.glascock.7/">Facebook</a>
