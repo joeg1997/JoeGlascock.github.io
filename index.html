@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe Glascock - Personal Webpage</title>
+    <title>Joe Glascock - Real Estate Investor & Lead Generation Expert</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,7 +31,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            border-bottom: 1px solid #007BFF;  /* Thinner border */
+            border-bottom: 1px solid #007BFF;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
@@ -45,13 +45,12 @@
             color: white;
             text-align: center;
             padding: 1rem 0;
-            position: relative;  /* Change from fixed to relative */
             width: 100%;
         }
         .profile-image {
             float: left;
             margin-right: 2rem;
-            margin-bottom: 1rem;  /* Added margin-bottom for spacing */
+            margin-bottom: 1rem;
             border-radius: 50%;
             width: 150px;
             height: 150px;
@@ -60,40 +59,70 @@
             clear: both;
         }
         .about-me-text {
-            overflow: hidden;  /* Clear floating elements */
+            overflow: hidden;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Joe Glascock</h1>
-        <p>Real Estate Investor & AI Enthusiast</p>
+        <p>Real Estate Investor & Lead Generation Expert</p>
     </header>
     <div class="container">
         <section id="about-me">
             <h2>About Me</h2>
             <img src="Me.jpg" alt="Joe Glascock" class="profile-image">
             <div class="about-me-text">
-                <p>Hello! I'm a passionate real estate Wholesaler and AI enthusiast. I specialize in wholesaling in residential Real estate and Life Productivity.</p>
+                <p>Hello! I'm a passionate real estate investor and lead generation expert. I specialize in investing in residential real estate in pro-landlord and pro-wholesale friendly states. I focus on fix and flip, buy and hold, and wholesale strategies to maximize returns and build long-term wealth.</p>
             </div>
             <div class="clear"></div>
         </section>
-        <section id="real-estate-portfolio">
-            <h2>Real Estate Portfolio</h2>
-            <p>Here are some of the properties I have invested in:</p>
+        <section id="services">
+            <h2>Services</h2>
+            <p>I offer a range of services to help you succeed in real estate:</p>
             <ul>
-                <li>Single-family homes</li>
-                <li>Duplexes</li>
-                <li>Small multi-family units</li>
+                <li>Fix and Flip</li>
+                <li>Buy and Hold</li>
+                <li>Wholesale</li>
             </ul>
+            <a href="#contact" class="cta-button">Get in Touch</a>
         </section>
-        <section id="ai-projects">
-            <h2>AI Projects</h2>
-            <p>I have worked on several AI projects, focusing on leveraging AI-driven property management tools to optimize real estate investments.</p>
-        </section>
-        <section id="blog">
-            <h2>Blog</h2>
-            <p>Welcome to my blog! Here, I share insights on real estate investing, AI developments, and personal productivity tips.</p>
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>"Joe's expertise in real estate has significantly boosted my business. Highly recommended!" - Client A</p>
         </section>
         <section id="contact">
             <h2>Contact Information</h2>
@@ -104,7 +133,31 @@
             </ul>
             <div class="social-links">
                 <a href="https://www.facebook.com/joe.glascock.7/">Facebook</a>
+                <a href="[LinkedIn URL]">LinkedIn</a>
+                <a href="[Twitter URL]">Twitter</a>
+                <a href="[GitHub URL]">GitHub</a>
             </div>
+        </section>
+        <section id="home-seller-form">
+            <h2>Sell Your Home</h2>
+            <form action="your-server-endpoint" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone Number" required>
+                <textarea name="address" placeholder="Property Address" required></textarea>
+                <textarea name="details" placeholder="Property Details" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section id="networking-contact-form">
+            <h2>Networking Contact</h2>
+            <form action="your-server-endpoint" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone Number" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
         </section>
     </div>
     <footer>
