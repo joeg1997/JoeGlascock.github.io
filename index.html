@@ -51,12 +51,16 @@
         .profile-image {
             float: left;
             margin-right: 2rem;
+            margin-bottom: 1rem;  /* Added margin-bottom for spacing */
             border-radius: 50%;
             width: 150px;
             height: 150px;
         }
         .clear {
             clear: both;
+        }
+        .about-me-text {
+            overflow: hidden;  /* Clear floating elements */
         }
     </style>
 </head>
@@ -69,7 +73,9 @@
         <section id="about-me">
             <h2>About Me</h2>
             <img src="your-profile-image.jpg" alt="Joe Glascock" class="profile-image">
-            <p>Hello! I'm Joe Glascock, a passionate real estate investor and AI enthusiast. I specialize in investing in residential real estate in pro-landlord and pro-wholesale friendly states. I also have a keen interest in AI and developer technology, exploring platforms like TensorFlow and PyTorch for AI development.</p>
+            <div class="about-me-text">
+                <p>Hello! I'm Joe Glascock, a passionate real estate investor and AI enthusiast. I specialize in investing in residential real estate in pro-landlord and pro-wholesale friendly states. I also have a keen interest in AI and developer technology, exploring platforms like TensorFlow and PyTorch for AI development.</p>
+            </div>
             <div class="clear"></div>
         </section>
         <section id="real-estate-portfolio">
@@ -94,7 +100,7 @@
             <p>Feel free to reach out to me through the following channels:</p>
             <ul>
                 <li>Email: <a href="mailto:joeg10697@gmail.com">joeg10697@gmail.com</a></li>
-                <li>Phone: <a href="tel:+15035866794">+1 503-586-6794</a></li>
+                <li>Phone: <a href="tel:+19712202915">+1 971-220-2915</a></li>
             </ul>
             <div class="social-links">
                 <a href="https://www.facebook.com/joe.glascock.7/">Facebook</a>
