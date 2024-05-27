@@ -120,6 +120,7 @@
             display: none;
             padding: 2rem;
             text-align: center;
+            font-size: 1.5rem; /* Increased font size */
         }
         .active-slide {
             display: block;
@@ -216,17 +217,19 @@
         showSlides(slideIndex);
 
         function plusSlides(n) {
-            showSlides(slideIndex += n);
+            let slides = document.getElementsByClassName("slides");
+            slideIndex += n;
+            if (slideIndex >= slides.length) { slideIndex = slides.length - 1; }
+            if (slideIndex < 0) { slideIndex = 0; }
+            showSlides(slideIndex);
         }
 
         function showSlides(n) {
             let slides = document.getElementsByClassName("slides");
-            if (n >= slides.length) { slideIndex = 0; }
-            if (n < 0) { slideIndex = slides.length - 1; }
             for (let i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active-slide");
             }
-            slides[slideIndex].classList.add("active-slide");
+            slides[n].classList.add("active-slide");
         }
 
         // Initial display
