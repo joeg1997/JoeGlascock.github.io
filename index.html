@@ -214,27 +214,28 @@
     </footer>
     <script>
         let slideIndex = 0;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            let slides = document.getElementsByClassName("slides");
-            slideIndex += n;
-            if (slideIndex >= slides.length) { slideIndex = slides.length - 1; }
-            if (slideIndex < 0) { slideIndex = 0; }
-            showSlides(slideIndex);
-        }
+        let autoSlideInterval;
 
         function showSlides(n) {
             let slides = document.getElementsByClassName("slides");
+            if (n >= slides.length) { slideIndex = slides.length - 1; }
+            if (n < 0) { slideIndex = 0; }
             for (let i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active-slide");
             }
-            slides[n].classList.add("active-slide");
+            slides[slideIndex].classList.add("active-slide");
         }
 
-        // Initial display
+        function plusSlides(n) {
+            clearInterval(autoSlideInterval); // Stop auto sliding when user navigates manually
+            slideIndex += n;
+            showSlides(slideIndex);
+            autoSlideInterval = setInterval(function() { plusSlides(1); }, 5000); // Restart auto sliding
+        }
+
         document.addEventListener('DOMContentLoaded', (event) => {
             showSlides(slideIndex);
+            autoSlideInterval = setInterval(function() { plusSlides(1); }, 5000); // Auto slide every 5 seconds
         });
     </script>
 </body>
