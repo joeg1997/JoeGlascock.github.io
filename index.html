@@ -47,6 +47,7 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out; /* Smooth transition */
         }
         h2 {
             border-bottom: 2px solid #007BFF;
@@ -59,9 +60,16 @@
             text-decoration: none;
             color: #007BFF;
             transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
         }
         .social-links a:hover {
             color: #0056b3;
+        }
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
         }
         footer {
             background: #007BFF;
@@ -92,10 +100,11 @@
             background-color: #007BFF;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         a.cta-button:hover {
             background-color: #0056b3;
+            transform: translateY(-3px);
         }
         .flex-container {
             display: flex;
@@ -233,7 +242,10 @@
             <h2>Contact Information</h2>
             <p>Feel free to reach out to me via email at <a href="mailto:joesrealestatesolutions@gmail.com">joesrealestatesolutions@gmail.com</a>. I'm available to discuss your real estate needs and how we can work together to achieve your goals. Please fill out the forms above to get started.</p>
             <div class="social-links">
-                <a href="https://www.facebook.com/joe.glascock.7/">Facebook</a>
+                <a href="https://www.facebook.com/joe.glascock.7/">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M22.675 0h-21.35c-0.736 0-1.325 0.589-1.325 1.325v21.351c0 0.736 0.589 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.672c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463 0.099 2.796 0.143v3.24l-1.918 0.001c-1.504 0-1.794 0.715-1.794 1.763v2.312h3.587l-0.467 3.622h-3.12v9.293h6.116c0.736 0 1.325-0.588 1.325-1.324v-21.351c0-0.736-0.589-1.325-1.325-1.325z"/></svg>
+                    Facebook
+                </a>
             </div>
         </section>
     </div>
