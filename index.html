@@ -147,6 +147,25 @@
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
+        .dot-container {
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active-dot {
+            background-color: #007BFF;
+        }
     </style>
 </head>
 <body>
@@ -189,6 +208,15 @@
             <!-- Navigation buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Slide indicators -->
+            <div class="dot-container">
+                <span class="dot active-dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
         </section>
 
         <div class="flex-container">
@@ -218,17 +246,29 @@
 
         function showSlides(n) {
             let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
             if (n >= slides.length) { slideIndex = slides.length - 1; }
             if (n < 0) { slideIndex = 0; }
             for (let i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active-slide");
             }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active-dot");
+            }
             slides[slideIndex].classList.add("active-slide");
+            dots[slideIndex].classList.add("active-dot");
         }
 
         function plusSlides(n) {
             clearInterval(autoSlideInterval); // Stop auto sliding when user navigates manually
             slideIndex += n;
+            showSlides(slideIndex);
+            autoSlideInterval = setInterval(function() { plusSlides(1); }, 5000); // Restart auto sliding
+        }
+
+        function currentSlide(n) {
+            clearInterval(autoSlideInterval); // Stop auto sliding when user navigates manually
+            slideIndex = n;
             showSlides(slideIndex);
             autoSlideInterval = setInterval(function() { plusSlides(1); }, 5000); // Restart auto sliding
         }
