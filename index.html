@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe Glascock - Real Estate Professional </title>
+    <title>Joe Glascock - Real Estate Professional</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -43,13 +43,15 @@
             width: 90%;
             margin: auto;
             overflow: hidden;
+            background: url('4kNaturebackground.jpg') no-repeat center center/cover;
         }
         section {
             margin: 2rem 0;
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* slightly transparent background */
             padding: 1rem 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
         }
         h2 {
             border-bottom: 1px solid #007BFF;
@@ -60,6 +62,12 @@
             margin: 0 0.5rem;
             text-decoration: none;
             color: #007BFF;
+            transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
+        }
+        .social-links a:hover {
+            color: #0056b3;
         }
         footer {
             background-color: #007BFF;
@@ -90,7 +98,7 @@
         .slides {
             display: none;
             padding: 2rem;
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -136,7 +144,7 @@
         }
         .newsletter-signup {
             text-align: center;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -170,7 +178,7 @@
         .flex-item {
             flex: 1;
             min-width: 300px;
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -216,7 +224,33 @@
                 width: 90%;
             }
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Joe Glascock is a dedicated real estate professional passionate about helping homeowners achieve a smooth and stress-free sale.">
+    <meta name="keywords" content="Real Estate, Home Sale, Cash Offers, Foreclosure, Inherited Property, Quick Sale">
+    <meta property="og:title" content="Joe Glascock - Real Estate Professional">
+    <meta property="og:description" content="Joe Glascock is a dedicated real estate professional passionate about helping homeowners achieve a smooth and stress-free sale.">
+    <meta property="og:image" content="https://joeg1997.github.io/Me.jpg">
+    <meta property="og:url" content="https://joeg1997.github.io/">
+    <meta property="og:type" content="website">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Joe Glascock",
+      "jobTitle": "Real Estate Professional",
+      "url": "https://joeg1997.github.io/",
+      "sameAs": [
+        "https://www.facebook.com/joe.glascock.7/"
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -311,7 +345,7 @@
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-            for (i = 0; i < dots.length; i++) {
+            for (i = 0; dots && i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active-dot", "");
             }
             slides[slideIndex-1].style.display = "block";
