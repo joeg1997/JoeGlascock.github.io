@@ -139,181 +139,6 @@
                 flex-direction: column;
             }
         }
-
-        /* Slideshow styles */
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-        }
-        .slides {
-            display: none;
-            padding: 2rem;
-            text-align: center;
-            font-size: 1.5rem; /* Increased font size */
-        }
-        .active-slide {
-            display: block;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        .dot-container {
-            text-align: center;
-            padding: 10px 0;
-            background: rgba(255, 255, 255,
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe Glascock - Real Estate Professional</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('https://joeg1997.github.io/4kNaturebackground.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-            scroll-behavior: smooth; /* Smooth scrolling */
-        }
-        header {
-            font-family: 'Lora', serif;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make text readable */
-            background-size: cover;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: background-color 0.3s ease; /* Smooth transition for sticky header */
-        }
-        header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 0;
-            transition: transform 0.3s ease; /* Smooth transition for animation */
-        }
-        header p {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 2rem 0;
-        }
-        section {
-            margin: 2rem 0;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out; /* Smooth transition */
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        h2 {
-            font-family: 'Lora', serif;
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-            color: #007BFF;
-        }
-        .social-links a {
-            margin: 0 0.5rem;
-            text-decoration: none;
-            color: #007BFF;
-            transition: color 0.3s;
-            display: inline-flex;
-            align-items: center;
-        }
-        .social-links a:hover {
-            color: #0056b3;
-        }
-        .social-links svg {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-        }
-        footer {
-            background: #007BFF;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-        .profile-image {
-            float: left;
-            margin-right: 2rem;
-            margin-bottom: 1rem;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease; /* Smooth transition for animation */
-        }
-        .profile-image:hover {
-            transform: scale(1.05); /* Scale up on hover */
-        }
-        .clear {
-            clear: both;
-        }
-        .about-me-text {
-            overflow: hidden;
-        }
-        a.cta-button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            color: white;
-            background-color: #007BFF;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        a.cta-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
-        }
-        .flex-container {
-            display: flex;
-            gap: 2rem;
-        }
-        .flex-item {
-            flex: 1;
-        }
-        @media (max-width: 768px) {
-            .flex-container {
-                flex-direction: column;
-            }
-        }
-
         /* Slideshow styles */
         .slideshow-container {
             position: relative;
@@ -371,6 +196,14 @@
             background-color: #007BFF;
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JL99MQVPJ8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JL99MQVPJ8');
+    </script>
 </head>
 <body>
     <header>
