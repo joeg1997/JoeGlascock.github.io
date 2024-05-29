@@ -3,110 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe Glascock - Real Estate Professional</title>
-    <meta name="description" content="Joe Glascock is a dedicated real estate professional passionate about helping homeowners achieve a smooth and stress-free sale.">
-    <meta name="keywords" content="Real Estate, Home Sale, Cash Offers, Foreclosure, Inherited Property, Quick Sale">
-    <meta property="og:title" content="Joe Glascock - Real Estate Professional">
-    <meta property="og:description" content="Joe Glascock is a dedicated real estate professional passionate about helping homeowners achieve a smooth and stress-free sale.">
-    <meta property="og:image" content="https://joeg1997.github.io/Me.jpg">
-    <meta property="og:url" content="https://joeg1997.github.io/">
-    <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Joe Glascock - Real Estate Professional </title>
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://joeg1997.github.io/4kNaturebackground.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #f0f2f5;
             color: #333;
-            scroll-behavior: smooth; /* Smooth scrolling */
         }
         header {
-            font-family: 'Lora', serif;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make text readable */
-            background-size: cover;
+            background: url('4kNaturebackground.jpg') no-repeat center center/cover;
             color: white;
             padding: 2rem 0;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
+            position: relative;
+        }
+        header::before {
+            content: "";
+            position: absolute;
             top: 0;
-            z-index: 1000;
-            transition: background-color 0.3s ease; /* Smooth transition for sticky header */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 1;
         }
         header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 0;
-            transition: transform 0.3s ease; /* Smooth transition for animation */
+            font-size: 2.5rem;
+            font-weight: bold;
         }
         header p {
             font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
         }
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
-            padding: 2rem 0;
+            overflow: hidden;
         }
         section {
             margin: 2rem 0;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out; /* Smooth transition */
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            font-family: 'Lora', serif;
-            border-bottom: 2px solid #007BFF;
+            border-bottom: 1px solid #007BFF;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
-            color: #007BFF;
         }
         .social-links a {
             margin: 0 0.5rem;
             text-decoration: none;
             color: #007BFF;
-            transition: color 0.3s;
-            display: inline-flex;
-            align-items: center;
-        }
-        .social-links a:hover {
-            color: #0056b3;
-        }
-        .social-links svg {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
         }
         footer {
-            background: #007BFF;
+            background-color: #007BFF;
             color: white;
             text-align: center;
             padding: 1rem 0;
-            margin-top: 2rem;
+            width: 100%;
         }
         .profile-image {
             float: left;
             margin-right: 2rem;
             margin-bottom: 1rem;
             border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease; /* Smooth transition for animation */
-        }
-        .profile-image:hover {
-            transform: scale(1.05); /* Scale up on hover */
+            width: 150px;
+            height: 150px;
         }
         .clear {
             clear: both;
@@ -114,32 +82,6 @@
         .about-me-text {
             overflow: hidden;
         }
-        a.cta-button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            color: white;
-            background-color: #007BFF;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        a.cta-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
-        }
-        .flex-container {
-            display: flex;
-            gap: 2rem;
-        }
-        .flex-item {
-            flex: 1;
-        }
-        @media (max-width: 768px) {
-            .flex-container {
-                flex-direction: column;
-            }
-        }
-        /* Slideshow styles */
         .slideshow-container {
             position: relative;
             max-width: 100%;
@@ -148,8 +90,9 @@
         .slides {
             display: none;
             padding: 2rem;
-            text-align: center;
-            font-size: 1.5rem; /* Increased font size */
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .active-slide {
             display: block;
@@ -167,20 +110,16 @@
             transition: 0.6s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
         }
         .next {
             right: 0;
             border-radius: 3px 0 0 3px;
         }
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
         .dot-container {
             text-align: center;
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
+            padding: 1rem;
+            background: #ddd;
+            border-radius: 8px;
         }
         .dot {
             cursor: pointer;
@@ -193,24 +132,96 @@
             transition: background-color 0.6s ease;
         }
         .active-dot {
+            background-color: #717171;
+        }
+        .newsletter-signup {
+            text-align: center;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .newsletter-signup input[type="email"] {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 80%;
+            max-width: 400px;
+        }
+        .newsletter-signup input[type="submit"] {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
             background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .newsletter-signup input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .flex-item {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 1rem 0;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1.2rem;
+            }
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            .container {
+                width: 95%;
+            }
+            section {
+                padding: 1rem;
+            }
+            .prev, .next {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+            .newsletter-signup input[type="email"] {
+                width: 90%;
+            }
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JL99MQVPJ8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JL99MQVPJ8');
-    </script>
 </head>
 <body>
     <header>
         <h1>Joe Glascock</h1>
         <p>Real Estate Professional</p>
-        <a href="#contact" class="cta-button">Contact Me</a>
-        <a href="#home-seller-form" class="cta-button">Sell Your Home</a>
     </header>
     <div class="container">
         <section id="about-me">
@@ -235,107 +246,77 @@
                 <p><strong>No Repairs or Cleaning Needed:</strong> You can sell your property as-is, without the need to make any repairs or even clean up. This saves you time, effort, and money, and lets you move on with your life without additional stress.</p>
             </div>
             <div class="slides">
-                <p><strong>Transparent and Fair Cash Offers:</strong> I offer transparent and fair cash offers based on a comprehensive market analysis and the current condition of your property. My goal is to ensure you receive a competitive and honest offer.</p>
+                <p><strong>Transparent and Fair Cash Offers:</strong> I provide fair cash offers based on the current market value of your property. You will receive a straightforward, no-obligation offer, ensuring that you know exactly what to expect.</p>
             </div>
             <div class="slides">
-                <p><strong>Expertise in Navigating Complex Situations:</strong> Whether you’re facing foreclosure, dealing with an inherited property, or managing an unwanted rental, I have the expertise to help you navigate these challenges smoothly and efficiently.</p>
-            </div>
-            <div class="slides">
-                <p><strong>Personalized Service:</strong> I am committed to providing personalized service tailored to your unique situation. I take the time to understand your needs and ensure that the entire process is as smooth and stress-free as possible.</p>
+                <p><strong>Overcoming Challenges:</strong> Whether you’re facing foreclosure, dealing with an inherited property, or managing an unwanted rental property, I have the expertise to navigate these challenges and offer solutions that work for you.</p>
             </div>
 
             <!-- Navigation buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <!-- Slide indicators -->
-            <div class="dot-container">
-                <span class="dot active-dot" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-            </div>
         </section>
-
-        <div class="flex-container">
-            <section id="home-seller-form" class="flex-item">
-                <h2>Sell Your Home</h2>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfsvNMRvnIk4rmhy1CVUQ7V6f3oUYbVo5W7A27tyALSDcaUzQ/viewform?embedded=true" width="100%" height="1272" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </section>
-            <section id="networking-contact-form" class="flex-item">
-                <h2>Networking Contact</h2>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepotIFylQQCOqimkLW-s4taGMMUjeu4M4Pt2k7-QrbNjolTg/viewform?embedded=true" width="100%" height="988" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </section>
+        
+        <div class="dot-container">
+            <span class="dot active-dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
         </div>
+
         <section id="contact">
             <h2>Contact Information</h2>
             <p>Feel free to reach out to me via email at <a href="mailto:joesrealestatesolutions@gmail.com">joesrealestatesolutions@gmail.com</a>. I'm available to discuss your real estate needs and how we can work together to achieve your goals. Please fill out the forms above to get started.</p>
             <div class="social-links">
                 <a href="https://www.facebook.com/joe.glascock.7/">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M22.675 0h-21.35c-0.736 0-1.325 0.589-1.325 1.325v21.351c0 0.736 0.589 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.672c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463 0.099 2.796 0.143v3.24l-1.918 0.001c-1.504 0-1.794 0.715-1.794 1.763v2.312h3.587l-0.467 3.622h-3.12v9.293h6.116c0.736 0 1.325-0.588 1.325-1.324v-21.351c0-0.736-0.589-1.325-1.325-1.325z"/></svg>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="20" height="20">
                     Facebook
                 </a>
+            </div>
+        </section>
+        
+        <section id="home-seller-form" class="flex-container">
+            <div class="flex-item">
+                <h2>Sell Your Home</h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfsvNMRvnIk4rmhy1CVUQ7V6f3oUYbVo5W7A27tyALSDcaUzQ/viewform?embedded=true" width="640" height="1272" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            <div class="flex-item">
+                <h2>Networking Contact</h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepotIFylQQCOqimkLW-s4taGMMUjeu4M4Pt2k7-QrbNjolTg/viewform?embedded=true" width="640" height="988" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
         </section>
     </div>
     <footer>
         <p>&copy; 2024 Joe Glascock. All rights reserved.</p>
     </footer>
-    <script>
-        let slideIndex = 0;
-        let autoSlideInterval;
 
-        function showSlides(n) {
-            let slides = document.getElementsByClassName("slides");
-            let dots = document.getElementsByClassName("dot");
-            if (n >= slides.length) { slideIndex = slides.length - 1; }
-            if (n < 0) { slideIndex = 0; }
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active-slide");
-            }
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("active-dot");
-            }
-            slides[slideIndex].classList.add("active-slide");
-            dots[slideIndex].classList.add("active-dot");
-        }
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
         function plusSlides(n) {
-            clearInterval(autoSlideInterval); // Stop auto sliding when user navigates manually
-            slideIndex += n;
-            showSlides(slideIndex);
-            autoSlideInterval = setInterval(function() { plusSlides(1); }, 5000); // Restart auto sliding
+            showSlides(slideIndex += n);
         }
 
         function currentSlide(n) {
-            clearInterval(autoSlideInterval); // Stop auto sliding when user navigates manually
-            slideIndex = n;
-            showSlides(slideIndex);
-            autoSlideInterval = setInterval(function() { plusSlides(1); }, 5000); // Restart auto sliding
+            showSlides(slideIndex = n);
         }
 
-        document.addEventListener('DOMContentLoaded', (event) => {
-            showSlides(slideIndex);
-            autoSlideInterval = setInterval(function() { plusSlides(1); }, 5000); // Auto slide every 5 seconds
-
-            // Add visible class to sections when they enter the viewport
-            const sections = document.querySelectorAll('section');
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = slides.length} // Stop at the last slide
+            if (n < 1) {slideIndex = 1} // Stop at the first slide
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active-dot";
+        }
     </script>
 </body>
 </html>
