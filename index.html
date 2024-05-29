@@ -51,7 +51,7 @@
         }
         section {
             margin: 2rem 0;
-            background: rgba(255, 255, 255, 0.8); /* slightly transparent background */
+            background: rgba(255, 255, 255, 0.8);
             padding: 1rem 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -311,15 +311,15 @@
             </div>
 
             <!-- Navigation buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1)" aria-label="Previous">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)" aria-label="Next">&#10095;</a>
         </section>
         
         <div class="dot-container">
-            <span class="dot active-dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot active-dot" onclick="currentSlide(1)" aria-label="Slide 1"></span> 
+            <span class="dot" onclick="currentSlide(2)" aria-label="Slide 2"></span> 
+            <span class="dot" onclick="currentSlide(3)" aria-label="Slide 3"></span> 
+            <span class="dot" onclick="currentSlide(4)" aria-label="Slide 4"></span> 
         </div>
 
         <section id="contact">
@@ -336,11 +336,11 @@
         <section id="home-seller-form" class="flex-container">
             <div class="flex-item">
                 <h2>Sell Your Home</h2>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfsvNMRvnIk4rmhy1CVUQ7V6f3oUYbVo5W7A27tyALSDcaUzQ/viewform?embedded=true" width="640" height="1272" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfsvNMRvnIk4rmhy1CVUQ7V6f3oUYbVo5W7A27tyALSDcaUzQ/viewform?embedded=true" width="640" height="1272" frameborder="0" marginheight="0" marginwidth="0" title="Sell Your Home Form">Loading…</iframe>
             </div>
             <div class="flex-item">
                 <h2>Networking Contact</h2>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepotIFylQQCOqimkLW-s4taGMMUjeu4M4Pt2k7-QrbNjolTg/viewform?embedded=true" width="640" height="988" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepotIFylQQCOqimkLW-s4taGMMUjeu4M4Pt2k7-QrbNjolTg/viewform?embedded=true" width="640" height="988" frameborder="0" marginheight="0" marginwidth="0" title="Networking Contact Form">Loading…</iframe>
             </div>
         </section>
     </div>
@@ -367,22 +367,20 @@
             let i;
             let slides = document.getElementsByClassName("slides");
             let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = slides.length} // Stop at the last slide
-            if (n < 1) {slideIndex = 1} // Stop at the first slide
+            if (n > slides.length) {slideIndex = slides.length}
+            if (n < 1) {slideIndex = 1}
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-            for (i = 0; dots && i < dots.length; i++) {
+            for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active-dot", "");
             }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active-dot";
         }
 
-        // Get the button
         let backToTopButton = document.getElementById("backToTop");
 
-        // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {scrollFunction()};
 
         function scrollFunction() {
@@ -393,7 +391,6 @@
             }
         }
 
-        // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
